@@ -19,6 +19,7 @@ function App() {
           <Route path='/Categories' element={<Categories/>}></Route>
           <Route path='/product/:id' element={<ProductDetail/>}></Route>
           <Route path='/CategoriPg/:category' element={<CategoriPg/>}></Route>
+          <Route path='*' element={<Home />} />
         </Routes>
      </BrowserRouter>
   );
