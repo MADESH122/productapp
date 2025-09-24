@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* -----------Navbar-Style------------ */
+.nav{
+    padding:40px 10px 10px 10px;
+    background:#F8F8FA;
+    border-radius:0 0 10px 10px;
+    display: flex;
+    flex-wrap: wrap;    
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    user-select: none;
+    border-bottom:3px solid rgb(175, 139, 91);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.nav .libtn{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav .libtn p{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: rgb(122, 88, 43);
+}
+.libtn button{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #F8F8FA;
+    border: none;
+    font-size: 20px;
+}
+.libtn button:hover{
+    cursor: pointer;
+}
+.active button{
+    color:rgb(148, 119, 81);
+}
+.inputs {
+    display: flex;
+    justify-content: center;
+}
+.inputs #search{
+    border-radius:10px 0 0 10px ;
+    width:70%;
+}
+.inputs #search,#sbtn{
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: rgba(209, 211, 211, 0.644);
+}
+.inputs #sbtn{
+    border-radius:0 10px 10px 0;
+    border-left:1px solid rgb(201, 200, 199);
+}
+@media screen and (max-width:670px){
+    .nav .libtn button{
+        margin: 20px 10px;
+    }
+}
+
+/* -----------discount Styles---------- */
+.discount{
+    margin: 10px 30px;
+    display: flex;
+    border-radius:10px;
+    align-items: center;
+    background-color: black;
+}
+.discount #disvalue{
+    margin: 10px 30px;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 45px;
+    font-weight: bolder;
+    color: white;
+    color:burlywood;
+    width: 50%;
+}
+.discount #disimg #onlineimg{
+    width: 100%;
+    height:350px;
+}    
+#buynow button{
+    font-family: "Bitter", serif;
+    background-color: burlywood;
+    outline: none;
+    border:2px solid burlywood;
+    color: black;
+    font-size:25px;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius:10px;
+}
+#buynow button:hover{
+    cursor:pointer;
+    background-color: rgb(218, 195, 166);
+    
+}
+@media screen and (max-width:1100px) {
+    .discount #disvalue{
+        position: absolute;
+        z-index:2;
+    }
+    .discount{
+        display: flex;
+        justify-content: center;
+    }
+    .discount #onlineimg{
+        filter: brightness(60%);
+    }
+}
+@media screen and (max-width:700px) {
+    .discount #disimg #onlineimg{
+        width: 100%;
+        height:250px;
+    }    
+    .discount #disvalue{
+        margin: 10px 10px;
+        font-size: 25px;
+        width: 70%;
+    }
+}
+@media screen and (max-width:480px) {
+    .discount{
+        margin: 10px 10px;
+        display: flex;
+        border-radius:10px;
+        align-items: center;
+        background-color: black;
+    }
+    .discount #disimg #onlineimg{
+        width: 100%;
+        height:200px;
+    }    
+    .discount #disvalue{
+        margin: 10px 10px;
+        font-size: 25px;
+        width: 70%;
+    }
+}
+
+/* -----------product Listing Style----------- */
+.listimg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    user-select: none;
+}
+.images{
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+}
+.images img:active{
+    background:rgb(224, 211, 193);
+}
+img{
+    border-radius:10px;
+    background-color: #eeecec;
+}
+.pdetail{
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    width: 290px;
+}
+.addcart{
+    border:1px black solid;
+    outline: none;
+    background-color:white;
+    width: 40%;
+    font-size:16px;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius:50px;
+}
+.addcart:active{
+    color: white;
+    background-color: rgb(70, 50, 23);
+}
+.categoriname{
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+}
+
+/* --------Loading Styles-------- */
+.animate{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    user-select: none;
+    padding: 100px 0 50px 0;
+}
+.load{
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
+.loader1{
+    border-bottom:10px solid burlywood;
+    border-top:10px solid rgb(90, 74, 52);
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    width: 100px;
+    height:100px;
+    border-radius:50%;
+    animation:load 0.40s ease-out infinite;
+    z-index: 1;
+}
+@keyframes load{
+    0%{
+        transform: rotatez(180deg);
+    }
+    25%{
+        border-bottom:10px solid rgb(90, 74, 52);
+    }
+    75%{
+        border-bottom:10px solid burlywood;
+    }
+    100%{
+        transform: rotatez(360deg);
+    }
+}
+.loader2{
+    position: absolute;
+    z-index: 2;
+    border-bottom:10px solid burlywood;
+    border-top:10px solid rgb(90, 74, 52);
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    margin:100px;
+    width: 50px;
+    height:50px;
+    border-radius:50%;
+    animation:load1 0.40s ease-out infinite;
+}
+@keyframes load1{
+    0%{
+        transform: rotatez(-180deg);
+    }
+    25%{
+        border-bottom:10px solid rgb(90, 74, 52);
+    }
+    75%{
+        border-bottom:10px solid burlywood;
+    }
+    100%{
+        transform: rotatez(-360deg);
+    }
+}
